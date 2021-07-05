@@ -78,12 +78,21 @@ def search_vaccine(date):
     # time.sleep(1)
     cls()
 
-dates = get_weeks_dates()
-i = 0
+def conwinator():
+    dates = get_weeks_dates()
+    i = 0
+    while True:
+        print('Searching for Date: ', dates[i])
+        date = dates[i]
+        search_vaccine(date=date)
+        i+=1
+        if i == 16:
+            i = 0
+
 while True:
-    print('Searching for Date: ', dates[i])
-    date = dates[i]
-    search_vaccine(date=date)
-    i+=1
-    if i == 16:
-        i = 0
+    try:
+        conwinator()
+    except KeyboardInterrupt:
+        break
+    except:
+        continue
