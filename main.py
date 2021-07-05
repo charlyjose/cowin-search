@@ -78,7 +78,7 @@ def search_vaccine(date):
     # time.sleep(1)
     cls()
 
-def conwinator():
+def cowinator():
     dates = get_weeks_dates()
     i = 0
     while True:
@@ -91,7 +91,7 @@ def conwinator():
 
 while True:
     try:
-        conwinator()
+        cowinator()
     except KeyboardInterrupt:
         break
     except:
