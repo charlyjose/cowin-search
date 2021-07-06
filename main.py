@@ -80,13 +80,14 @@ def search_vaccine(date):
 
 def cowinator():
     dates = get_weeks_dates()
+    dates_len = len(dates)
     i = 0
     while True:
         print('Searching for Date: ', dates[i])
         date = dates[i]
         search_vaccine(date=date)
         i+=1
-        if i == 16:
+        if i == dates_len:
             i = 0
 
 while True:
